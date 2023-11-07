@@ -1,68 +1,30 @@
-<html>
-<head>
-<title>frame1f</title>
-</head>
-<body>
-<style>
-body {
-  background-image: url('MITS.jfif');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-</style>
-<h2><center>REGISTRATION FORM</center></h2><br>
-<br>
-<form>
-<b>Name:</b><input type="text" name=name"/><br>
-<br>
-<b>E-mail id:</b><input type="text" name="email"/><br>
-<br>
-<br><br>
-<b>Address:</b><textarea rows="5"cols="50" name="address">
-</textarea><br>
-<br>
-<br>
-<br>
-<b>Gender:</b>
-<input type="checkbox"/>Male
-<input type="checkbox"/>Female<br>
-<br>
-<br>
-<b>Date of birth:</b><input type="date" name="date of birth"/><br>
-<br>
-<br>
-<b>State:</b>
-<select>
-<option></option>
-<option>Kerala</option>
-<option>Karnataka</option>
-<option>Goa</option>
-<option>Haryana</option>
-<br>
-<br>
-</select>
-<br>
-<br>
+  <center> <h1>JS String and Math Functions</h1>
 
-<b>Course:</b>
-<select>
-<option>CSE</option>
-<option>EEE</option>
-<option>MCA</option>
-<option>CIVIL</option>
-</select>
-<br>
-<br>
-<b>College name:</b><input type="text" name="college"/><br>
-<br>
-<br>
-<b>Have you done any computer related course:</b><br>
-<input type="radio"/>Yes
-<input type="radio"/>No<br>
-<br>
-<br>
-<input type="submit"> <input type="reset">
-</form>
-</body>
-</html>
+    <h2>String Functions</h2>
+    <label for="inputString">Enter a String: </label>
+    <input type="text" id="inputString">
+    <button onclick="stringFunctions()">Submit</button>
+    <p id="stringOutput"></p>
+
+  
+    <script>
+        function stringFunctions() {
+            var inputString = document.getElementById("inputString").value;
+            var stringOutput = document.getElementById("stringOutput");
+
+           
+            var stringLength = inputString.length;
+
+       
+            var upperCaseString = inputString.toUpperCase();
+
+           
+            var lowerCaseString = inputString.toLowerCase();
+
+            stringOutput.innerHTML = "Length of the string: " + stringLength + "<br>";
+            stringOutput.innerHTML += "Uppercase: " + upperCaseString + "<br>";
+            stringOutput.innerHTML += "Lowercase: " + lowerCaseString;
+        }
+
+      
+    </script>

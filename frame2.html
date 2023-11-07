@@ -1,41 +1,27 @@
-<html>
-<head>
-<title>College details</title>
-</head>
-<body>
-<h3  style="color:RED";><b><center>MUTHOOT INSTITUTE OF TECHNOLOGY AND SCIENCE</b></h3><br>
-<center><img src="mits.jpg" align="center"></center>
-<h3 style="color:RED"><center>About Us</center></h3><br>
-<p><center>Muthoot Institute of Technology and Science (MITS) is promoted by Muthoot M. George Institute of Technology, a Section 25 Company within the Muthoot Group. MITS is a self financing technical institution offering postgraduate and undergraduate engineering programmes, situated in the industrial suburb of Kochi, close to the Smart City and Info Park, approximately 15 kms from Vytilla Junction towards Muvattupuzha on the Cochin Madurai National Highway.
+  <center> <h1>JS Math Functions</h1>
 
-The promoters with their commanding presence in the domains of Financial Services, Hospitality, Healthcare, Renewable Energy and Information Technology, are committed to building MITS as a centre of excellence, focusing purely on merit. This “temple of learning” will provide to the students, state-of-the-art infrastructure, highly qualified and proficient teacher and various faculty of engineering and allied streams, embedded in a conducive<br> environment where focus will be on their harmonious development.
-The Muthoot Group is a flourishing business empire that has pervaded into each and every big & small town of the country, is home to 18 diversified divisions and 4500 plus branches with a global presence. Over 2,53,000 customers visit The Muthoot Group branches every day. The Group has served over 48 crore customers (including repeat customers) till date. The story of The Muthoot Group is built on the foundations of passion, commitment, honesty, traditions and values. The principle of continuous growth and expansion forms the essence of all its activities.
+    
+    <h2>Math Functions</h2>
+    <label for="inputNumber">Enter a Number: </label>
+    <input type="number" id="inputNumber">
+    <button onclick="mathFunctions()">Submit</button>
+    <p id="mathOutput"></p>
+<script>
+        function mathFunctions() {
+            var inputNumber = parseFloat(document.getElementById("inputNumber").value);
+            var mathOutput = document.getElementById("mathOutput");
 
-The Group recently celebrated 130 years of unblemished business excellence lending services to millions of under-served Indians leading to Financial Inclusion even in the most remote and rural areas of the country. Since its inception, The Muthoot Group has been transforming lives of millions of Indians across the country, giving wings to their dreams and creating successful realities. The Muthoot Group has not only grown exponentially but has also facilitated growth for a sizeable population of the country that falls in the under-privileged category.
-<h3 style="color:RED">Vision</h3>
-<p>To be a centre of excellence for learning and research in engineering and technology, producing intellectually well-equipped and socially committed citizens possessing an ethical value system.
+           
+            var squareRoot = Math.sqrt(inputNumber);
 
-<br>
-<br>
-<h3 style="color:RED"><center>Mission</h3></center>
-<center><p>* Offer well-balanced programme of instruction, practical exercise and opportunities in technology.<br>
+           
+            var roundedNumber = Math.round(inputNumber);
 
-* Foster innovation and ideation of technological solutions on sustainable basis.<br>
+         
+            var randomValue = Math.random();
 
-* Nurture a value system in students and engender in them a spirit of inquiry.<br></p></center>
-<br>
-<br>
-<h3 style="color:RED"><center>Placements Provided</center></h3>
-<center><p><b>Our major placement recruiters</b></p></center>
-<div style="text-align: center;"><ul>
-<li>infosys</li>
-<li>tcs</li>
-<li>ibm</li>
-<li>Deloitte</li>
-<li>ust global</li><br>
-</ul></div>
-<br>
-<br>
-<a href="#top">about</a>
-</body>
-</html>
+            mathOutput.innerHTML = "Square Root: " + squareRoot + "<br>";
+            mathOutput.innerHTML += "Rounded Number: " + roundedNumber + "<br>";
+            mathOutput.innerHTML += "Random Value: " + randomValue;
+        }
+    </script>
