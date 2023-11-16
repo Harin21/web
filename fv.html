@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Required fields must not be blank");
+    return false;
+  }
+}
+</script>
+</head>
+<body bgcolor="beige">
+
+<center><h2>JavaScript Validation</h2></center>
+
+<center><form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form></center>
+
+</body>
+</html>
